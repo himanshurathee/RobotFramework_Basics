@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-25T18:18:58.380274" rpa="false" schemaversion="5">
+<suite id="s1" name="CRM" source="W:\Certifications_GitHub\RobotFramework_Basics\Tests\CRM.robot">
+<test id="s1-t1" name="Add Customers" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-25T18:18:58.624134" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
+<arg>https://automationplayground.com/crm/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-25T18:18:58.624134" elapsed="3.201364"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T18:19:04.827665" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T18:19:01.826495" elapsed="3.001170"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-25T18:19:04.829116" elapsed="2.225476"/>
+</kw>
+<status status="PASS" start="2024-03-25T18:18:58.622349" elapsed="8.433352"/>
+</test>
+<status status="PASS" start="2024-03-25T18:18:58.382330" elapsed="8.677299"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CRM">CRM</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
