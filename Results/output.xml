@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-25T18:18:58.380274" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-25T18:47:05.779677" rpa="false" schemaversion="5">
 <suite id="s1" name="CRM" source="W:\Certifications_GitHub\RobotFramework_Basics\Tests\CRM.robot">
-<test id="s1-t1" name="Add Customers" line="5">
+<test id="s1-t1" name="Add Customers" line="11">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-03-25T18:47:06.052426" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-03-25T18:47:06.053411" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-25T18:47:06.053411" level="INFO">Starting the test case</msg>
+<arg>Starting the test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-25T18:47:06.053411" elapsed="0.000997"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-25T18:18:58.624134" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
+<msg time="2024-03-25T18:47:06.054408" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
 <arg>https://automationplayground.com/crm/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-25T18:18:58.624134" elapsed="3.201364"/>
+<status status="PASS" start="2024-03-25T18:47:06.054408" elapsed="2.789957"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>width=1935</arg>
+<arg>height=1090</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-03-25T18:47:08.845657" elapsed="0.335057"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-25T18:19:04.827665" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-03-25T18:47:12.182123" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-25T18:19:01.826495" elapsed="3.001170"/>
+<status status="PASS" start="2024-03-25T18:47:09.181766" elapsed="3.000357"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-25T18:19:04.829116" elapsed="2.225476"/>
+<status status="PASS" start="2024-03-25T18:47:12.183612" elapsed="2.392016"/>
 </kw>
-<status status="PASS" start="2024-03-25T18:18:58.622349" elapsed="8.433352"/>
+<doc>This is some basic info about the TEST</doc>
+<status status="PASS" start="2024-03-25T18:47:06.050421" elapsed="8.526197"/>
 </test>
-<status status="PASS" start="2024-03-25T18:18:58.382330" elapsed="8.677299"/>
+<doc>This is some basic info about the whole SUITE</doc>
+<status status="PASS" start="2024-03-25T18:47:05.781632" elapsed="8.799322"/>
 </suite>
 <statistics>
 <total>
