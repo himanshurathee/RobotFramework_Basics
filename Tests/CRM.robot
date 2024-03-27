@@ -1,22 +1,23 @@
-*** Settings ***
-Documentation  This is some basic info about the whole SUITE
-Library             SeleniumLibrary
-
 #run the script from terminal
 #robot -d Results Tests/CRM.robot
+*** Settings ***
+Documentation  This is some basic info about the whole SUITE
+Library                 SeleniumLibrary
+Resource                Resources/Common.robot
 
+
+Test Setup              Begin Web Test
+Test Teardown           End Web Test
 
 *** Test Cases ***
 #Test case name is necessary
 Add Customers
-    [Documentation]     This is some basic info about the TEST
+    [Documentation]             This is some basic info about the TEST
 
     #Initialize Selenium (Not necessary)
-    set selenium speed  .2s
-    set selenium timeout  10s
+    Set Browser
+    log                         Starting the test case
 
-    log                 Starting the test case
-    open browser        https://automationplayground.com/crm/       chrome
 
     #Resize browser window for recording
     #set window position  x=341  y=169
@@ -49,4 +50,5 @@ Add Customers
     wait until page contains        Success! New customer added.
 
     sleep       3s
-    close browser
+
+
