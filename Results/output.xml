@@ -1,281 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-27T19:24:38.745421" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-27T19:33:52.619126" rpa="false" schemaversion="5">
 <suite id="s1" name="CRM" source="W:\Certifications_GitHub\RobotFramework_Basics\Tests\CRM.robot">
-<test id="s1-t1" name="Add Customers" line="13">
-<kw name="Begin Web Test" type="SETUP">
+<test id="s1-t1" name="Add Customers" line="14">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-27T19:24:39.044866" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
+<msg time="2024-03-27T19:33:52.872144" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
 <arg>https://automationplayground.com/crm/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-27T19:24:39.043878" elapsed="18.577095"/>
+<status status="PASS" start="2024-03-27T19:33:52.872144" elapsed="2.844195"/>
 </kw>
-<status status="PASS" start="2024-03-27T19:24:39.042817" elapsed="18.579394"/>
+<status status="PASS" start="2024-03-27T19:33:52.871592" elapsed="2.844747"/>
 </kw>
-<kw name="Set Browser">
+<kw name="Set Browser" owner="Common">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>.2s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-03-27T19:24:57.623495" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:55.717759" elapsed="0.000000"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-03-27T19:24:57.623495" elapsed="0.202629"/>
+<status status="PASS" start="2024-03-27T19:33:55.717759" elapsed="0.202453"/>
 </kw>
-<status status="PASS" start="2024-03-27T19:24:57.622211" elapsed="0.203913"/>
+<status status="PASS" start="2024-03-27T19:33:55.716339" elapsed="0.203873"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-03-27T19:24:57.827124" level="INFO">Starting the test case</msg>
+<msg time="2024-03-27T19:33:55.921216" level="INFO">Starting the test case</msg>
 <arg>Starting the test case</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-27T19:24:57.826124" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-27T19:33:55.921216" elapsed="0.000000"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-27T19:24:57.832108" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.58)
-Stacktrace:
-	GetHandleVerifier [0x00007FF720507062+63090]
-	(No symbol) [0x00007FF720472CB2]
-	(No symbol) [0x00007FF72030EC65]
-	(No symbol) [0x00007FF7202ECA7C]
-	(No symbol) [0x00007FF72037D687]
-	(No symbol) [0x00007FF720392AC1]
-	(No symbol) [0x00007FF720376D83]
-	(No symbol) [0x00007FF7203483A8]
-	(No symbol) [0x00007FF720349441]
-	GetHandleVerifier [0x00007FF7209025CD+4238301]
-	GetHandleVerifier [0x00007FF72093F72D+4488509]
-	GetHandleVerifier [0x00007FF720937A0F+4456479]
-	GetHandleVerifier [0x00007FF7205E05A6+953270]
-	(No symbol) [0x00007FF72047E57F]
-	(No symbol) [0x00007FF720479254]
-	(No symbol) [0x00007FF72047938B]
-	(No symbol) [0x00007FF720469BC4]
-	BaseThreadInitThunk [0x00007FFE3D54257D+29]
-	RtlUserThreadStart [0x00007FFE3EB6AA58+40]
-</msg>
-<msg time="2024-03-27T19:24:57.834102" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.58)
-Stacktrace:
-	GetHandleVerifier [0x00007FF720507062+63090]
-	(No symbol) [0x00007FF720472CB2]
-	(No symbol) [0x00007FF72030EC65]
-	(No symbol) [0x00007FF7202ECA7C]
-	(No symbol) [0x00007FF72037D687]
-	(No symbol) [0x00007FF720392AC1]
-	(No symbol) [0x00007FF720376D83]
-	(No symbol) [0x00007FF7203483A8]
-	(No symbol) [0x00007FF720349441]
-	GetHandleVerifier [0x00007FF7209025CD+4238301]
-	GetHandleVerifier [0x00007FF72093F72D+4488509]
-	GetHandleVerifier [0x00007FF720937A0F+4456479]
-	GetHandleVerifier [0x00007FF7205E05A6+953270]
-	(No symbol) [0x00007FF72047E57F]
-	(No symbol) [0x00007FF720479254]
-	(No symbol) [0x00007FF72047938B]
-	(No symbol) [0x00007FF720469BC4]
-	BaseThreadInitThunk [0x00007FFE3D54257D+29]
-	RtlUserThreadStart [0x00007FFE3EB6AA58+40]
-</msg>
+<msg time="2024-03-27T19:33:56.366943" level="INFO">Current page contains text 'Customers Are Priority One!'.</msg>
 <arg>Customers Are Priority One!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2024-03-27T19:24:57.827124" elapsed="0.110101">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.58)
-Stacktrace:
-	GetHandleVerifier [0x00007FF720507062+63090]
-	(No symbol) [0x00007FF720472CB2]
-	(No symbol) [0x00007FF72030EC65]
-	(No symbol) [0x00007FF7202ECA7C]
-	(No symbol) [0x00007FF72037D687]
-	(No symbol) [0x00007FF720392AC1]
-	(No symbol) [0x00007FF720376D83]
-	(No symbol) [0x00007FF7203483A8]
-	(No symbol) [0x00007FF720349441]
-	GetHandleVerifier [0x00007FF7209025CD+4238301]
-	GetHandleVerifier [0x00007FF72093F72D+4488509]
-	GetHandleVerifier [0x00007FF720937A0F+4456479]
-	GetHandleVerifier [0x00007FF7205E05A6+953270]
-	(No symbol) [0x00007FF72047E57F]
-	(No symbol) [0x00007FF720479254]
-	(No symbol) [0x00007FF72047938B]
-	(No symbol) [0x00007FF720469BC4]
-	BaseThreadInitThunk [0x00007FFE3D54257D+29]
-	RtlUserThreadStart [0x00007FFE3EB6AA58+40]
-</status>
+<status status="PASS" start="2024-03-27T19:33:55.922279" elapsed="0.444664"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:33:56.369446" level="INFO">Clicking link 'Sign In'.</msg>
 <arg>Sign In</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.937225" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:56.368449" elapsed="0.960600"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:33:57.769121" level="INFO">Current page contains text 'Login'.</msg>
 <arg>Login</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.938215" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:57.330149" elapsed="0.438972"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:33:57.771177" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
 <arg>id=email-id</arg>
 <arg>admin@robotframeworktutorial.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.938215" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:57.771177" elapsed="0.911774"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:33:58.683462" level="INFO">Typing text 'qwerty' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>qwerty</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.938215" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:58.683462" elapsed="0.749942"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:33:59.435018" level="INFO">Clicking button 'id=submit-id'.</msg>
 <arg>id=submit-id</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.938215" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:33:59.434379" elapsed="1.525211"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:01.377946" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
 <arg>Our Happy Customers</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.939212" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:00.959590" elapsed="0.418356"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:01.378732" level="INFO">Clicking link 'id=new-customer'.</msg>
 <arg>id=new-customer</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.939212" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:01.378732" elapsed="0.999269"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:02.815580" level="INFO">Current page contains text 'Add Customer'.</msg>
 <arg>Add Customer</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.939212" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:02.379589" elapsed="0.435991"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:02.817680" level="INFO">Typing text 'hr@gmail.com' into text field 'id=EmailAddress'.</msg>
 <arg>id=EmailAddress</arg>
 <arg>hr@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.939212" elapsed="0.001390"/>
+<status status="PASS" start="2024-03-27T19:34:02.816601" elapsed="0.831006"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:03.649622" level="INFO">Typing text 'Himanshu' into text field 'id=FirstName'.</msg>
 <arg>id=FirstName</arg>
 <arg>Himanshu</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.940602" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:03.648624" elapsed="0.821021"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:04.469645" level="INFO">Typing text 'Rathee' into text field 'id=LastName'.</msg>
 <arg>id=LastName</arg>
 <arg>Rathee</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.941606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:04.469645" elapsed="0.711093"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:05.181243" level="INFO">Typing text 'Dublin' into text field 'id=City'.</msg>
 <arg>id=City</arg>
 <arg>Dublin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.941606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:05.181243" elapsed="0.699857"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:05.882419" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
 <arg>id=StateOrRegion</arg>
 <arg>TX</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.941606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:05.881100" elapsed="1.709589"/>
 </kw>
 <kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:07.591716" level="INFO">Selecting 'male' from radio button 'gender'.</msg>
 <arg>gender</arg>
 <arg>male</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.942606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:07.590689" elapsed="0.730193"/>
 </kw>
 <kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:08.321452" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
 <arg>name=promos-name</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.942606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:08.321452" elapsed="1.180016"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-27T19:34:09.502143" level="INFO">Clicking button 'Submit'.</msg>
 <arg>Submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.942606" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:09.502143" elapsed="1.612235"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Success! New customer added.</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.943607" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:11.115399" elapsed="0.231736"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-27T19:34:14.348068" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-03-27T19:24:57.943607" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-27T19:34:11.347834" elapsed="3.000234"/>
 </kw>
-<kw name="End Web Test" type="TEARDOWN">
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-27T19:24:57.944976" elapsed="2.275605"/>
+<status status="PASS" start="2024-03-27T19:34:14.351159" elapsed="2.396157"/>
 </kw>
-<status status="PASS" start="2024-03-27T19:24:57.944976" elapsed="2.276623"/>
+<status status="PASS" start="2024-03-27T19:34:14.350155" elapsed="2.398679"/>
 </kw>
 <doc>This is some basic info about the TEST</doc>
-<status status="FAIL" start="2024-03-27T19:24:39.041816" elapsed="21.180482">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.58)
-Stacktrace:
-	GetHandleVerifier [0x00007FF720507062+63090]
-	(No symbol) [0x00007FF720472CB2]
-	(No symbol) [0x00007FF72030EC65]
-	(No symbol) [0x00007FF7202ECA7C]
-	(No symbol) [0x00007FF72037D687]
-	(No symbol) [0x00007FF720392AC1]
-	(No symbol) [0x00007FF720376D83]
-	(No symbol) [0x00007FF7203483A8]
-	(No symbol) [0x00007FF720349441]
-	GetHandleVerifier [0x00007FF7209025CD+4238301]
-	GetHandleVerifier [0x00007FF72093F72D+4488509]
-	GetHandleVerifier [0x00007FF720937A0F+4456479]
-	GetHandleVerifier [0x00007FF7205E05A6+953270]
-	(No symbol) [0x00007FF72047E57F]
-	(No symbol) [0x00007FF720479254]
-	(No symbol) [0x00007FF72047938B]
-	(No symbol) [0x00007FF720469BC4]
-	BaseThreadInitThunk [0x00007FFE3D54257D+29]
-	RtlUserThreadStart [0x00007FFE3EB6AA58+40]
-</status>
+<status status="PASS" start="2024-03-27T19:33:52.870231" elapsed="23.878603"/>
 </test>
 <doc>This is some basic info about the whole SUITE</doc>
-<status status="FAIL" start="2024-03-27T19:24:38.748825" elapsed="21.476659"/>
+<status status="PASS" start="2024-03-27T19:33:52.621165" elapsed="24.130786"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="CRM">CRM</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CRM">CRM</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-03-27T19:24:39.039887" level="ERROR">Error in file 'W:\Certifications_GitHub\RobotFramework_Basics\Tests\CRM.robot' on line 6: Resource file 'Resources\common.robot' does not exist.</msg>
-<msg time="2024-03-27T19:24:57.832108" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.58)
-Stacktrace:
-	GetHandleVerifier [0x00007FF720507062+63090]
-	(No symbol) [0x00007FF720472CB2]
-	(No symbol) [0x00007FF72030EC65]
-	(No symbol) [0x00007FF7202ECA7C]
-	(No symbol) [0x00007FF72037D687]
-	(No symbol) [0x00007FF720392AC1]
-	(No symbol) [0x00007FF720376D83]
-	(No symbol) [0x00007FF7203483A8]
-	(No symbol) [0x00007FF720349441]
-	GetHandleVerifier [0x00007FF7209025CD+4238301]
-	GetHandleVerifier [0x00007FF72093F72D+4488509]
-	GetHandleVerifier [0x00007FF720937A0F+4456479]
-	GetHandleVerifier [0x00007FF7205E05A6+953270]
-	(No symbol) [0x00007FF72047E57F]
-	(No symbol) [0x00007FF720479254]
-	(No symbol) [0x00007FF72047938B]
-	(No symbol) [0x00007FF720469BC4]
-	BaseThreadInitThunk [0x00007FFE3D54257D+29]
-	RtlUserThreadStart [0x00007FFE3EB6AA58+40]
-</msg>
 </errors>
 </robot>

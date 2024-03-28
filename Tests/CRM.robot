@@ -3,7 +3,7 @@
 *** Settings ***
 Documentation  This is some basic info about the whole SUITE
 Library                 SeleniumLibrary
-Resource                Resources/Common.robot
+Resource                ../Resources/Common.robot
 
 
 Test Setup              Begin Web Test
